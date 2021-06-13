@@ -1,2 +1,1 @@
-# pandasclass
-pandas bootcamp
+My Training Bootcamps
