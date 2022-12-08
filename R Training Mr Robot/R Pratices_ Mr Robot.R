@@ -123,5 +123,93 @@ var.name=3
 .2var_name=3#invalid
 _var_name =3 #invalid
 
+# 07Dec2022
+#scope
 
 
+
+hello <- function(){
+  f=3
+  print(c)
+}
+
+hello()
+f
+
+g=3
+hello <- function(){
+  g=2
+  print(g)
+}
+hello()
+g=4
+hello()
+
+#constants
+
+PI_C = 3.14
+print(PI)
+
+
+######################### 08Dec2020 #########
+#data types
+
+#numeric, integer, logical , complex, character and raw
+
+a<- 3 # scalar 
+print(a)
+b<- c(3,3,2,2) #vector
+print(b)
+
+numerical <- 323
+typeof(numerical)
+print(numerical)
+class(numerical)
+
+mydecimal <- 323.32
+typeof(mydecimal)
+class(mydecimal)
+
+myinterger <-3223L
+print(myinterger)
+typeof(myinterger)
+class(myinterger)
+
+mycomplex <- 3+2i
+print(mycomplex)
+typeof(mycomplex)
+class(mycomplex)
+
+
+mychar <-"I love to be a friend with Mr Robot for ever"
+mychar1 <-'I love to be a friend with Mr Robot for ever'
+cat(mychar,"\n",mychar1) # \n escape character
+
+class(mychar)
+typeof(mychar)
+
+myraw <- charToRaw("I love to be a friend with Mr Robot for ever")
+class(myraw)
+typeof(myraw)
+
+myloc <- TRUE
+typeof(myloc)
+myloc <- true
+
+#for number
+a<-0
+
+#for string
+b <- ''
+
+#to test if this belong the right data type
+is.numeric(434)
+is.numeric(434.22)
+is.numeric(43L) #something wrong
+is.integer(232)
+is.integer(232.22)
+is.integer(23L)
+is.character('2')
+is.character(32)
+
+typeof(data)
