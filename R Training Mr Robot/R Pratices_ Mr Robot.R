@@ -213,3 +213,80 @@ is.character('2')
 is.character(32)
 
 typeof(data)
+
+#09Dec2022 ###################################
+a <- 2
+vec <-c(32,3,2)
+myvect <- c(23,2.2,'gr',3+2i,vec,a)
+myvect
+class(myvect)
+typeof(myvect)
+
+myvec1 <- 3:10 # : operator
+print(myvec1)
+
+myvec2 <- 10:1 #descending
+print(myvec2)
+
+myvec4 <- 20:-5
+print(myvec4)
+myvec3 <-c(6:12,59)
+print(myvec3)
+
+#atomic vector
+myvec6 <- c(3,3,2,3) #numeric vector
+myvect7 <- c(3L,5L,6L) #integer vector
+myvect8 <- c("ganesh","vaihav","rudrix") #charac vector
+myvect9 <-c(FALSE,TRUE) #logical vector
+
+#as function
+a<- '3'
+class(a)
+b<- as.integer(a)
+class(b)
+as.numeric()
+as.logical()
+as.character()
+as.complex(43)
+
+#rep()
+rep(3,4)
+rep(c(4,3,2),4)
+rep(c(1,2,3),each=5)
+rep(3:6,5)
+rep(2:5,each=3)
+
+#seq()
+seq(1,10)
+seq(1,10,0.5)
+seq(0,20,2)
+seq(10,1,-2)
+seq(1,4,length=10)
+
+rep(seq(1,3,0.5),3)
+rep(seq(1,3,0.5),each=3)
+
+#random number
+sample(100,12)
+sample(10:20,10)
+
+#unifrom random number
+runif(100,1,5)
+
+#reading and accessing the vector
+myvec10 <- c(1,2,3,4,5,6,7,8,9,10)
+myvec10
+myvec10[1]
+myvec10[0]
+myvec10[9]
+
+#index vector
+mychar <-c("a"=3,"b"=4,"c"=8)
+mychar["a"]
+mychar["b"]
+
+#logical index vector
+mylog <-c(1,2,3,4)
+mylog[c(TRUE,FALSE,TRUE,FALSE)]
+
+
