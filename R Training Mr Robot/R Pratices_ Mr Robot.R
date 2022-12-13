@@ -214,7 +214,11 @@ is.character(32)
 
 typeof(data)
 
+###################################
+###################################
 #09Dec2022 ###################################
+###################################
+###################################
 a <- 2
 vec <-c(32,3,2)
 myvect <- c(23,2.2,'gr',3+2i,vec,a)
@@ -289,4 +293,138 @@ mychar["b"]
 mylog <-c(1,2,3,4)
 mylog[c(TRUE,FALSE,TRUE,FALSE)]
 
+###### 13DEC2022 #######################
+#######################
+#######################
 
+myvec <- c(3,3,2,3)
+class(myvec)
+typeof(myvec)
+
+myvec1 <- c('g','b','c','ga','ds')
+class(myvec1)
+typeof(myvec1)
+
+myvec1 <- c('g','b','c','ga','ds',3,2,3,3,2+2i)
+class(myvec1)
+typeof(myvec1)
+
+#using colon operator
+mycolon <- 3:10
+mycolon
+
+mycolon <- -5:10
+mycolon
+
+mycolvec <- c(4:10,-4)
+mycolvec
+
+#using rep() function
+rep(5,3)
+rep("ab",3)
+rep(c(1,3,4),3)
+rep(c(3,5,2),each=5)
+rep(2:5,4)
+rep(2:4,each=5)
+numeric(4) #get the value of zero 
+numeric(10)
+character(6)
+logical(4)
+
+#using seq()
+seq(from=5,to=10,by=0.5)
+seq(5,10,0.5)
+seq(10,3,-2)
+seq(10,3,length=100)
+rep(seq(1,10,2),10)
+
+#atomic vector
+#numeric vector
+mynv <- 4.5
+mynv <-c(3,2,4,5,6)
+mynv
+class(mynv)
+a<- as.numeric(myinv)
+class(a)
+#integer vector
+myinv <- rep(seq(3L,5L),4)
+class(myinv)
+a <- as.integer(mynv)
+a
+c<- as.integer("54")
+class(c)
+class(a)
+#character 
+
+mychar <- c("43","ga","ss","rw","po")
+mychar
+class(mychar)
+e<- as.character(myinv)
+class(e)
+
+#logical 
+as.logical(4)
+as.logical(3>4)
+as.logical(myinv)
+as.logical(3)
+a=4
+b=3
+c=6
+d=9
+mylog <-c(a>b,c<b,d>c)
+mylog
+
+#random number
+sample(100,12)
+sample(100)
+sample(5:100,10)
+
+#empty vector
+x=c()
+typeof(x)
+
+y <- NULL
+typeof(y)
+
+z <- vector()
+typeof(z)
+
+a <-c(x,1,3,y,4)
+a
+
+#readin/access element in vector
+
+myvec <-c(3,4,6,2,4,7,"ga")
+length(myvec)
+myvec
+myvec[1]
+myvec[0]
+myvec[4]
+
+#character index === named
+myvec <-c("a"=3,"b"=4,"c"=6)
+myvec
+myvec["a"]
+myvec[1]
+
+#index --> indices not index
+myind <- c(43,4,5,6,2,3,4,5,6,7,8,9,3,2,2,4,55)
+myind[1]
+myind[c(3,6,8)]
+myind[2:5]
+myind[5:1]
+myind[c(2:5,12)]
+length(myind)
+myind[length(myind)]
+min(myind)
+myind[min(myind)]
+myind[-1]
+myind[c(-1,-3,-5)]
+myind[-2:-4]
+myind[c(-2:-4)]
+myind[c(2:-4)]
+
+myind[3]
+myind
+myind[3]<-66
+myind
