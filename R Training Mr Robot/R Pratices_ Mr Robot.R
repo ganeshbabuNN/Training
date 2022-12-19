@@ -428,3 +428,46 @@ myind[3]
 myind
 myind[3]<-66
 myind
+
+
+##16DEC2022#########################################
+####################################################
+myind <- c(43,4,5,6,2,3,4,5,6,7,8,9,3,2,2,4,55)
+
+#boolean operator , < ,>, ==. logical
+
+myind[myind==4]
+myind[myind>10]
+myind[myind<10]
+myind[myind<=10]
+myind[myind>=10]
+myind[myind!=4]
+
+#logical operator And(&), OR(|) and not !
+myind[(myind>1) & (myind<10)]
+myind[(myind>1) | (myind<10)]
+myind[(myind>1) & (myind!=55)]
+
+#which functions used to find which index is belong
+which(myind==55)
+which(myind>10)
+
+#%in% searches the values in the vector
+myind[myind %in% 10]
+myind[myind %in% 55]
+myind[myind%in%c(55,100)]
+
+#all() and any()
+
+#all is special function that checks whether all the comonetns in the vectors meet certains conditions
+myind <- c(43,46,77,54,23,54,77,55)
+all(myind <0)
+all(myind <30)
+all(myind <80)
+all(myind <50)
+all((myind >1) & (myind<100))
+all((myind >1) & (myind<100))
+
+#any functions
+
+
