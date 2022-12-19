@@ -469,5 +469,11 @@ all((myind >1) & (myind<100))
 all((myind >1) & (myind<100))
 
 #any functions
-
+myind <- c(43,46,77,54,23,54,77,55)
+any(myind <0)
+any(myind <30)
+any(myind <80)
+any(myind <50)
+any((myind >1) & (myind<100))
+any((myind >1) & (myind>100))
 
