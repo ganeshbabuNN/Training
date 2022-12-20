@@ -477,3 +477,91 @@ any(myind <50)
 any((myind >1) & (myind<100))
 any((myind >1) & (myind>100))
 
+
+###############20DEC2022####################################
+########################################################################
+#vector operations and manipulations
+
+a <- c(1,3,4,5,6)
+b <- c(3,2,3,4,5)
+c(a,b)  #combing two vector
+
+#arthematic vectors
+a+b #adding two vector
+a-b
+a*b
+a/b
+a%%b
+
+#logical vectors
+c<-c(TRUE,FALSE,TRUE,FALSE,FALSE)
+a[c]
+i<-c(TRUE,FALSE,TRUE,FALSE,FALSE)
+a[i]
+
+#numeric index vector
+a[3]
+a[-3]
+
+#duplicate index
+a[c(4,2,2,2,3)]
+
+#range index
+a[3:10]
+a[2:4]
+
+a[10]
+
+#named index vectors
+names(a)<-c("a","b","c","d","e")
+a
+a[c("a","b")]
+
+#remove the named index
+a
+names(a)<-NULL
+a
+
+#basic statisical operations
+a
+sum(a)
+prod(a)
+cumprod(a)
+mean(a)
+median(a)
+mode(a)
+var(a)
+sd(a)
+summary(a)
+
+#LIST
+mynum <- c(1,2,3,4,5)
+myint <- c(3.3L,5L,2L,4.3L,2.4L)
+mychar <- c("a","b","c","d","e")
+mylog <- c(TRUE,FALSE,FALSE,TRUE,TRUE)
+mylist <- list(mynum,myint,mychar,mylog)
+class(mylist)
+
+
+#creating list()
+mylist1 <- list(32,4L,TRUE,"aga")
+class(mylist1)
+
+#named list
+employees <- list(
+              names=c("vai","gan","rud","prave"),
+              age=c(46,22,18,55),
+              gender=c("g","g","f",'t'),
+              salary =c("1c","40K","60K","90L"))
+
+employees
+
+#you can call the colum using $
+employees$names
+employees$age
+employees["age"]
+class(employees$age)
+employees$age[2]
+class(employees)
+
+
