@@ -561,7 +561,11 @@ employees$names
 employees$age
 employees["age"]
 class(employees$age)
-employees$age[2]
+employees$age
+employees$age[2] <-25
 class(employees)
+
+#scalar, vectors, list
+#CRUD -- create , read, update and delete
 
 
