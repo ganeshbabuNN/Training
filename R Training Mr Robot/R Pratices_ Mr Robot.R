@@ -549,12 +549,13 @@ class(mylist1)
 
 #named list
 employees <- list(
-              names=c("vai","gan","rud","prave"),
-              age=c(46,22,18,55),
-              gender=c("g","g","f",'t'),
-              salary =c("1c","40K","60K","90L"))
+  names=c("vai","gan","rud","prave"),
+  age=c(46,22,18,55),
+  gender=c("g","g","f",'t'),
+  salary =c("1c","40K","60K","90L"))
 
 employees
+typeof(employees)
 
 #you can call the colum using $
 employees$names
@@ -568,4 +569,74 @@ class(employees)
 #scalar, vectors, list
 #CRUD -- create , read, update and delete
 
+###############04JAN2022####################################
+########################################################################
 
+#create
+#using the list functions
+#-----------------------
+employees <- list(
+  names=c("vai","gan","rud","prave"),
+  age=c(46,22,18,55),
+  gender=c("g","g","f",'t'),
+  salary =c("1c","40K","60K","90L"))
+
+employees
+
+#without a object name but this is not advisable without object name.
+
+employees1 <- list(
+    c("vai","gan","rud","prave"),
+   c(46,22,18,55),
+   c("g","g","f",NULL),
+   c("1c","40K","60K","90L"))
+
+employees1
+
+#for the above employees1 if you want to assign object names.
+
+names(employees1) <-c("names","age","gender","salary")
+
+employees1
+
+typeof(employees1) #get to tknow the the typeo
+class(employees1)
+
+#print the list structure
+str(employees1)
+
+#print only object names of a list
+names(employees1)
+length(names(employees1))
+
+#using the list functions using vector
+#-----------------------
+
+employ <-vector(mode="list")
+employ
+class(employ)
+
+#now adding the objects in the list
+employ[["names"]] <-c("vai","gan","rud","prave")
+employ[["age"]] <- c(46,22,18,55)
+employ[["gender"]] <- c("g","g","f",'t')
+
+employ
+str(employ)
+
+#creating the using the vector,list and matrix
+list_data <- list(
+              c("g","c","e"),
+              matrix(c(32,23,43,23,34,43),nrow=2),
+              list("MCA","b","dfd")
+)
+list_data
+
+typeof(list_data)
+
+#reading the list
+employees
+employees$names[3]
+
+employees1
+employees1[[2]][3]
