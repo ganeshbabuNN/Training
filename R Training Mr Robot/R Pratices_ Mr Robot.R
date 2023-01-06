@@ -640,3 +640,62 @@ employees$names[3]
 
 employees1
 employees1[[2]][3]
+
+###############06JAN2022####################################
+########################################################################
+
+employ
+
+employ$gender
+employ[[1]]
+employ["gender"]
+
+#indexing list using brackets
+employ[c(2,3)]
+employ["gender"]
+employ[["gender"]][3]# retrive the specifc observations
+employ[["gender"]][-3]#delete
+employ[["gender"]][-1:-3]#delete
+employ[["gender"]][c(2:4)]
+employ[["gender"]] #to retervie the observations
+employ[[3]] #to retervie the observations using index number
+
+x <- employ[["gender"]]
+typeof(x)
+y <- employ["gender"]
+typeof(y)
+
+#sum of age
+sum(employ$age)
+sum(employ[["age"]])
+
+#sublistings
+employ
+x <-employ$age
+y<- employ$gender
+
+employ1 <- list("age"=x,"gender"=y)
+employ1
+
+#updating the list
+employ <-vector(mode="list")
+employ[["names"]] <-c("vai","gan","rud","prave")
+employ[["age"]] <- c(46,22,18,55)
+employ[["gender"]] <- c("g","g","f",'t')
+
+employ
+employ$names[2]<-"pratp"
+employ[1] <- "employee_name"
+names(employ)[1] <-"employee_name"
+employ
+
+#Assign how remove the values of that objects called "names" of this employ
+#adding a new object to exiting list
+employ$place <- c("B","G","D","H")
+employ
+
+#remove the object of that list
+employ$place <- NULL
+
+#delete  the list
+rm(employ)
