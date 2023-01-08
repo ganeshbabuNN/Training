@@ -699,3 +699,56 @@ employ$place <- NULL
 
 #delete  the list
 rm(employ)
+
+###############08JAN2022####################################
+########################################################################
+
+#convertions from list to vector
+l1 <- list(5:10)
+l1
+typeof(l1)
+l2 <- list(6:20)
+l2
+
+#convert list to vector
+v1 <- unlist(l1)
+typeof(v1)
+
+#merge two list.
+m1 <-list(l1,l2)
+m1
+paste0(l1,l2)#not able 
+
+#matrix 
+
+#create a matrix
+
+row_names <- c("r1","r2","r3","r4")
+col_names <- c("c1","c2","c3","c4","c5")
+
+matrix(c(1:20),nrow=4,byrow = TRUE,dimnames = list(row_names,col_names))
+matrix(c(1:20),nrow=4,byrow = FALSE,dimnames = list(row_names,col_names)) #by row is changed
+matrix(c(1:20),nrow=5,byrow = TRUE,dimnames = list(row_names,col_names)) #THROWS ERROR
+matrix(c(1:20),nrow=6,byrow = TRUE,dimnames = list(row_names,col_names)) #NOT ABLE ACCEPT THE EVENT
+matrix(c(1:100),nrow=8,byrow = TRUE)
+
+matrix(c(1:100),nrow=8,ncol = 5,byrow = TRUE) #ncol
+matrix(c(1:100),ncol = 5,byrow = TRUE) #default rows
+m1 <- matrix(c(1:100),ncol = 5,byrow = TRUE) #default rows
+class(m1)
+typeof(m1)
+
+m1
+#structure of the matrix
+dim(m1)
+nrow(m1)
+ncol(m1)
+str(m1)
+
+matrix(rep(5,10),nrow = 2)
+matrix(seq(1,4,length=20),nrow = 2)
+
+matrix(seq(1,4,length=20)) #no rows and no columsn sepcificed
+
+
+
