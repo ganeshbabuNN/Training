@@ -753,4 +753,74 @@ matrix(seq(1,4,length=20)) #no rows and no columsn sepcificed
 ###############09JAN2022####################################
 ########################################################################
 
+m1<-matrix(c(1:8),nrow = 2)
+m1
+
+#indixing matric
+m1[2,3]
+m1[1,2]
+m1[1,4]
+m1[c(1,2),c(2,3)]
+a<- m1[1,2]
+b<-m1[2,3]
+print(a,b)
+c(m1[1,2],m1[2,3])
+cat(a,b)
+c(m1[2,1],m1[2,3],m1[2,4])
+m1[1:2,2:4]
+m1[1,-3]
+
+m1[1:2,-2]
+
+#filtering
+m1[m1>3]
+m1[m1>5]
+m1[m1>1 & m1 <4]
+m1[m1>1 | m1 <4]
+m1[m1==4]
+m1[m1!=4]
+which(m1==3)
+
+
+#updating an editings the matrix
+m1[2,2] <- 10
+m1
+
+m1[1,2:4]<-100
+
+c(m1[1,4],m1[1,2])<-c(5,4) 
+m1
+m1[,2]
+
+#adding and deleting
+m1
+
+m1<- rbind(m1,c(4,3,2,5))
+m1
+m1<-cbind(m1,c(7,6,5))
+#delete
+m1[-1,] 
+m1[,-1]
+m1[c(-1,-3),]
+
+#matrix operations
+m1<-m1[,c(-3:-5)]
+m1
+
+m2<-matrix(c(7:10),nrow=2)
+m2<-rbind(m2,c(2,3))
+
+m1
+m2
+m1+m2
+m1-m2
+m1*m2
+m1/m2
+
+#factor
+
+
+
+
+
 
