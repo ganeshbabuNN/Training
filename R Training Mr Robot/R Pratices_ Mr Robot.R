@@ -817,10 +817,64 @@ m1-m2
 m1*m2
 m1/m2
 
+
+###############11JAN2022####################################
+########################################################################
+
 #factor
+x <- c(4,3,4,3,3,3,3,4,4,5,6,7,7,7,77,8)
+x
+typeof(x)
+factor(x)
 
+y<-c("a","a","b","e","e","g")
+v <-factor(y)
+class(v)
+#factor checking
+is.factor(v)
 
+#convert the numeric vector a factor
+v1<-as.factor(x)
+class(v1)
 
+v
+length(v)
+
+#reading and accessing
+x
+x[3]
+x[c(3,2)]
+x[-3]
+x[c(TRUE,FALSE)]
+
+#updating /modifcation the factor
+a <- c(1,2,3,4,5,6,1,2,3,4,5,6)
+f <-ordered(a,labels=c("low","middle","high"))
+f
+class(f)
+
+#factor in dataframe
+height <- c(125,132,156,133,144,165,111)  
+weight <- c(33,66,44,40,23,56,43)  
+rudr <-c("1","1","1","1","3","3","4")
+gender <- c("male","male","female","female","male","female","male")
+
+student_info<-data.frame(height,weight,gender,rudr,stringsAsFactors =TRUE)
+student_info
+class(student_info)
+is.factor(student_info$gender)
+str(student_info)
+
+#by functions
+n <- c(23,24,56,54,56,66)
+serv <- factor(c("N","N","M","M","H","H"))
+by(n,serv,mean)
+s <- by(n,serv,sum)
+
+ls<- as.list(s)
+
+#split the factor levels
+split(n,serv)
 
 
 
