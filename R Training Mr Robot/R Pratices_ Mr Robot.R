@@ -876,5 +876,79 @@ ls<- as.list(s)
 #split the factor levels
 split(n,serv)
 
+###############13JAN2022####################################
+#############################################################
+
+#data frame concepts
+#creating using vector
+id <- c(1,2,3,4)
+name <- c("rud","vai","ver","gan")
+age <- c(24,18,45,23)
+student <-data.frame(id,name,age)
+student
+
+typeof(student)
+class(student)
+
+#summary of the df
+str(student) 
+dim(student)
+nrow(student)
+ncol(student)
+
+#you can create using the data.frame( directorly)
+student1<-data.frame(
+          id <- c(1,2,3,4),
+          name <- c("rud","vai","ver","gan"),
+          age <- c(24,18,45,23),
+          dob <-c("2021-01-02","2024-02-03","2023-02-03","2021-02-03"),
+          stringsAsFactors = FALSE
+        )
+names(student1)<-c("id","name","age","dob") #using the name
+
+#using the without names
+student2<-data.frame(
+  id =c(1,2,3,4),
+  name= c("rud","vai","ver","gan"),
+  age=c(24,18,45,23),
+  dob=c("2021-01-02","2024-02-03","2023-02-03","2021-02-03"),
+  stringsAsFactors = FALSE
+)
+
+#using the load file
+getwd()
+setwd("/Users/ganeshbabug/Documents/github/datasets/Other")
+tips <- read.csv("tips.csv")
+
+#creating using matrix
+m1 <- matrix(c(1,2,3,4,5,6,7,8,9,10),ncol = 2)
+m1
+
+df1=as.data.frame(m1)
+is.vector(df1$V1)
+typeof(df1$V1)
+
+df1
+names(df1)<-c("L1","L2")
+
+
+#from  list
+t1 <- list(c('a','b','c'),c(3,4,5))
+data.frame(t1[[1]],t1[[2]])
+data.frame(t(sapply(t1,c)))
+data.frame(t(t(sapply(t1,c))))y
+
+#from array
+a1 <- array(c(1,2,3,4,5,6))
+as.data.frame(a1)
+
+a2 <- array(c(1,2,3,4,5,6),dim=c(2,4))
+a2
+as.data.frame(a2)
+as.data.frame(t(a2))
+
+
+#reading/indexing tommorr
+
 
 
