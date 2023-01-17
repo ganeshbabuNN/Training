@@ -947,8 +947,72 @@ a2
 as.data.frame(a2)
 as.data.frame(t(a2))
 
-
 #reading/indexing tommorr
 
+###############16JAN2022####################################
+#############################################################
+
+flim <- read.csv("/Users/ganeshbabug/Documents/github/datasets/Other/film.csv",sep = ";")
+dim(flim)
+str(flim)
+nrow(flim)
+ncol(flim)
+
+head(flim)
+tail(flim)
+
+#classical way of reading
+flim
+flim[1,]
+flim[3,]
+
+read.csv("https://github.com/ganeshbabuNN/datasets/blob/master/Other/cars.csv",sep=";",header = FALSE)
+
+###############17JAN2022####################################
+#############################################################
+
+flim[4:10,]
+flim[c(6,8),]
+flim[c(6,8),]
+flim[,1]
+flim[,c(1,2)]
+flim[,c(2:4)]
+flim[,c("Length",7:10)]#not acceptable
+flim[,c(2,7:10)]
+names(flim)
+flim[,"Subject"]
+flim[,c("Awards","Length")]
+flim[c("Awards","Length")]
+flim[4,c("Awards","Length")]
+flim[3:6,c("Awards","Length")]
+flim[-4,]
+flim[-1:-5,-3:-5]
+
+head(flim)
+flim$Length
+flim$Year
+c(flim$Length,flim$Title)
+typeof(flim$Length)
+
+
+#random obs
+i <- sample(nrow(flim),100)
+flim[i,]
+flim[sample(nrow(flim),100),]
+
+#flitering or subsetting
+head(flim)
+str(flim)
+flim$Year ==1991
+flim[flim$Year ==1991,]
+
+
+flim[flim$Year ==c(1991:1993),]
+
+flim[flim$Subject=="Comedy",]
+flim[flim$Subject==c("Comedy","Horror"),]
+flim[(flim$Subject=="Comedy") | (flim$Subject=="Horror") ,]
+flim[flim$Subject =="Comedy" | flim$Subject=="Horror",]
+flim[flim$Subject =="Comedy" | flim$Subject=="Horror",c("Year","Subject")]
 
 
