@@ -1015,4 +1015,45 @@ flim[(flim$Subject=="Comedy") | (flim$Subject=="Horror") ,]
 flim[flim$Subject =="Comedy" | flim$Subject=="Horror",]
 flim[flim$Subject =="Comedy" | flim$Subject=="Horror",c("Year","Subject")]
 
+###############18JAN2022####################################
+#############################################################
 
+flim
+names(flim)
+dim(flim)
+#sorting the df
+flim[,c("Year","Title")]
+fl <- flim[order(flim$Title),]#ascending
+fl <- flim[order(1:10),c(1:3)]# wrong ascending
+flim[order(flim$Title),]
+fl <- flim[order(flim$Title,decreasing = FALSE),]#descending
+fl <- flim[order(flim$Title),]#descending
+fl <- flim[order(flim$Title,decreasing = TRUE),]#descending
+fl <- flim[order(flim$Title,flim$Year,decreasing = FALSE),]#descending
+
+#summary
+summary(flim)
+
+#updating 
+head(flim)
+flim[2,2] <- 115
+flim[4,3] <-"Cubas"
+flim[1] <-1000
+flim
+
+#adding a new row and col
+f2 <- head(flim[1:2])
+f2
+f2<- rbind(f2,c(1900,342))
+f2
+
+f2$age <-2024 -f2$Year
+f2$gender <- "Male"
+f2
+
+#update a column name
+names(f2)[3] <- "aging"
+
+#delete the column
+f2$gender <- NULL
+f2
