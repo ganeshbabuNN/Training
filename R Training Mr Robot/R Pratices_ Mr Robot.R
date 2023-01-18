@@ -1053,7 +1053,38 @@ f2
 
 #update a column name
 names(f2)[3] <- "aging"
+f2
+colnames(f2)[3] <-"age"
+f2
 
-#delete the column
+#update the row name
+f2
+rownames(f2)[1] <- "g1"
+rownames(f2)
+f2
+
+#remove the column
 f2$gender <- NULL
 f2
+
+
+#delete the column
+f2
+f2$age <- NULL
+f2<-f2[,-2]
+f2
+
+#delete the all value of column 
+f2$gender<-""
+f2
+f2$age<-""
+f2
+
+#delete the row
+f2[-2,]
+f2[c(-3,-4),]
+
+ls()
+rm("f2")
+f2
+
