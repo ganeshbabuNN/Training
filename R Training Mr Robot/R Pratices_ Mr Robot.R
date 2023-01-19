@@ -1088,3 +1088,49 @@ ls()
 rm("f2")
 f2
 
+
+###############19JAN2022####################################
+############################################################
+head(flim)
+
+id <- c(101,102,103,104,105)
+name <- c("vaib","rudra","gan","veer","rep")
+salary <- c(32000,45000,83722,34000,45666)
+
+employ <- data.frame(id,name,salary)
+employ
+
+employ <-rbind(employ,c(107,"dag",45339))
+
+#add hours
+h <- c(233,456,212,343,232)
+emp_h<- data.frame(id,h)
+names(emp_h)[2]<-"hour"
+
+emp_h<- rbind(emp_h,c(106,343))
+
+employ
+emp_h
+
+#inner join
+#that key is available both df , then it display
+merge(employ,emp_h,by="id",all=FALSE) #inner join
+
+#outer join
+#all the ID which matched or not matched will be displayed
+merge(employ,emp_h,by="id",all=TRUE) 
+
+#left join
+#whatever the ID from the left table is matched or matched will be displayedd
+merge(x=employ,y=emp_h,by="id",all.x=TRUE) 
+merge(x=employ,y=emp_h,by="id",all.x=FALSE) 
+
+#right join
+#whatever the ID from the right table is matched or matched will be displayedd
+merge(employ,emp_h,by="id",all.y=TRUE) 
+merge(employ,emp_h,by="id",all.y=FALSE) 
+
+#cross join
+#for every row left row merge all the records of that time right
+merge(employ,emp_h,by=NULL)
+
