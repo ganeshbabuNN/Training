@@ -966,8 +966,6 @@ flim
 flim[1,]
 flim[3,]
 
-read.csv("https://github.com/ganeshbabuNN/datasets/blob/master/Other/cars.csv",sep=";",header = FALSE)
-
 ###############17JAN2022####################################
 #############################################################
 
