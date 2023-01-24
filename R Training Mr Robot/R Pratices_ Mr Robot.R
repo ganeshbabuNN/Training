@@ -1134,3 +1134,64 @@ merge(employ,emp_h,by="id",all.y=FALSE)
 #for every row left row merge all the records of that time right
 merge(employ,emp_h,by=NULL)
 
+###############24JAN2022####################################
+############################################################
+id <- c(101,102,103,104,105)
+name <- c("vaib","rudra","gan","veer","rep")
+salary <- c(32000,45000,83722,34000,45666)
+
+employ <- data.frame(id,name,salary)
+employ
+#NA is a logical constant of length 1 which contains a missing value indicator
+employ <- rbind(employ,c(106,NA,NA))
+#use is.na() to test the missing values
+is.na(employ$name[7])
+is.na(employ$salary[7])
+
+#null testing
+a<-list(2,3,3,4)
+typeof(a)
+is.list(a)
+a <- NULL 
+is.null(a)
+
+#operators
+#arthmatic, relational, logical , assignment and miscellanous
+
+#arhematic
+2+3
+2-3
+2/3
+2*3
+2%%3
+2^2 #SQUARE OPERATOR
+
+#RELATIONAL OPERATOR
+2<3
+2>3
+2==3
+2<=3
+2>=3
+2!=3 #NOT EQUAL TO OPERATOR
+
+#LOGICAL 
+(2<3) & (2>3) #AND OPERATOR
+(2<3) || (2>3) #OR OPERATOR
+!(2<3) #NOT OPERATOR
+
+#assignment operator
+a <- 3
+a = 3
+a <<- 3
+3 -> a
+3 ->> a
+
+
+
+
+
+
+
+
+
+
