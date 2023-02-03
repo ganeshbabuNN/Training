@@ -1185,9 +1185,78 @@ a <<- 3
 3 ->> a
 
 
+###############03FEB2022####################################
+############################################################
 
+#miscellanous operations
+#  : 
+a<- c(1:9) #colon operator
+3%in%a #%in% operator
+10%in%a #%in% operator
 
+#numbers
+#number conversations
+#implicit and explicit
 
+a<- c(1:9,"a")
+typeof(a)
+b <-c(TRUE,2)
+b
+typeof(b)
+
+cd<-c(TRUE,"a")
+cd
+
+#coercion rule logical-->integer-->numeric-->complex --> character
+1 < "2"
+"1" > 2
+1 < "a"
+"a"> 1
+
+a=32
+89 < "a"
+
+#explicit conversations
+
+as.numeric("4")
+as.integer("2")
+as.character("ga32")
+as.vector(list(43,3,2))
+as.matrix(list(32,22,22))
+as.data.frame(list(32,23,23))
+
+#number functions
+abs(-9383) #converts negative to positive
+ceiling(4.322)
+floor(4.622)
+log(3)
+trunc(43.322)
+round(4.682,2)
+log10(4.34)
+signif(2.33,3)
+exp(32)
+sin(3)
+cos(3)
+tan(3)
+
+mystu<-data.frame(
+  name=c("a","b","c"),
+  marks=c(34,23,45)
+)
+
+mystu$marks/sum(mystu$marks)
+
+#math functions
+sqrt(4)
+a <-c(4,3,2,23,4,56,6,7,7,88)
+min(a)
+max(a)
+
+#df apply
+mapply(max,mystu[c(1,2)])
+mapply(min,mystu[c(1,2)])
+
+print(pi)
 
 
 
