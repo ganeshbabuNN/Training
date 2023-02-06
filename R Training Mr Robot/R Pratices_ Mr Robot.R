@@ -1259,6 +1259,76 @@ mapply(min,mystu[c(1,2)])
 print(pi)
 
 
+###############06FEB2022####################################
+############################################################
 
+#raondom
+runif(3,0,10)
+runif(3,5.0,10.0)
+sample(1:10,4)
 
+#range
+x<-c(4,2,3,3,2,-9,Inf,30,NA)
+x
+range(x,na.rm = TRUE)
+?range
+
+range(employ$salary)
+
+#strings
+#creating a string
+mychar1 <-'hello world'
+mychar <-"hello world"
+mychar
+typeof(mychar)
+
+#escape characters
+cat(mychar,"\n",mychar1)
+length(mychar)
+nchar(mychar)
+
+#empty character
+x<-""
+x
+nchar(x)
+
+#create a vector of two empty string
+y<- character(2)
+y
+nchar(y)
+
+#ceater a empty character vector
+z <-character(0)
+z
+nchar(z)
+
+z[1] <-"tom"
+z
+nchar(z)
+
+is.character(z) #to check the character or not
+
+#string formatting
+#cat function
+#paste function
+#stringf()
+
+company<- 'GSK'
+exp <- 15
+name <- "ganesh babu g"
+
+cat("Myself",name,'Working in',company,'for past',exp,'Years')
+paste("Myself",name,'Working in',company,'for past',exp,'Years')
+
+#using stringF() functions
+
+sprintf("%f",0.73478605948)
+sprintf("%.3f",0.73478605948)
+sprintf("%.f",0.73478605948)
+sprintf("%+f",0.73478605948)
+sprintf("%-f",-0.73478605948)
+sprintf("%g",0.73478605948)
+sprintf("%.7g",0.73478605948)
+sprintf("%d",4837373)
+sprintf("%.4s","ganeshbabug")
 
