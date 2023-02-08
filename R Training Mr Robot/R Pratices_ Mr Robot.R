@@ -1332,3 +1332,65 @@ sprintf("%.7g",0.73478605948)
 sprintf("%d",4837373)
 sprintf("%.4s","ganeshbabug")
 
+
+###############08FEB2022####################################
+############################################################
+
+#acessing of string elements
+x <- "Iam the robot"
+x
+
+substr(x,1,3)
+substr(x,8,14)
+substr(x,1,3) #not able to reverse the element
+substring(x,1,4)
+
+x #here the statements itself is a string
+letters #here the individual character is string
+letters[1]
+letters[1:4]
+letters[c(1,5,7)]
+
+#string properties
+#to prove string is a immutable object in R
+a <- "ganesh"
+.Internal(inspect(a))
+a<-"rudresh"
+a
+.Internal(inspect(a))
+
+#escape character
+
+print("positive\\negative")
+print("positive") #to represent in single quote
+print("\'positive\'")
+print("positive\'s")
+print("\"positive\"")
+cat("positive","negative")
+cat("positive","\n","negative") #here it is happening
+cat("positive","\t","negative") 
+cat("positive ","\b","negative")
+cat("positive","\r","negative")
+cat("positive","\\","negative")
+
+#regular expressions *pearl expression
+grep("[ld]", c("Philadelphia", "Milwaukee", "Boston"), value = TRUE)
+grepl("[ld]", c("Philadelphia", "Milwaukee", "Boston"))
+gsub("[ld]", "***", c("Philadelphia", "Milwaukee", "Boston"))
+gsub("[ld]", "$", c("Philadelphia", "Milwaukee", "Boston"))
+#https://github.com/ganeshbabuNN/MyNotes/blob/master/R%20Language/4-API/Regular%20Expression/Regular%20Expressions.txt
+?grep
+#split case
+x <- " ganesh babu "
+x
+strsplit(x," ")[[1]][1] #split the string
+trimws(x,which="both")
+trimws(x,which="left")
+trimws(x,which="right")
+trimws(x)
+
+
+
+
+
+
