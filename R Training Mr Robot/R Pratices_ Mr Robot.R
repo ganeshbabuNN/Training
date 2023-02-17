@@ -1374,7 +1374,7 @@ cat("positive","\r","negative")
 cat("positive","\\","negative")
 
 #regular expressions *pearl expression
-grep("[ld]", c("Philadelphia", "Milwaukee", "Boston"), value = TRUE)
+grep("[ld]", c("Philadelphia", "Milwaukee", "Boston","loan"), value = TRUE)
 grepl("[ld]", c("Philadelphia", "Milwaukee", "Boston"))
 gsub("[ld]", "***", c("Philadelphia", "Milwaukee", "Boston"))
 gsub("[ld]", "$", c("Philadelphia", "Milwaukee", "Boston"))
@@ -1390,7 +1390,37 @@ trimws(x,which="right")
 trimws(x)
 
 
+###############17FEB2022####################################
+############################################################
 
+text <- "This should be supported on all platforms as it is a feature as of C99. The format is not uniquely defined"
+grep("ganesh",text)
+grep("all",text)
+grep(pattern = "gan",text)
+grep("ON",text,ignore.case = TRUE)
+grep("on",text,value = TRUE)
+grepl("all",text)
+
+x <- c("Philadelphia", "Austin")
+x
+regexpr("hil", x)
+regexpr("NO", x)
+gregexpr("hil", x)
+
+text1 <- c("gbag","gbag","brga",'rubn','prkh','zktu')
+grep("gbag",text1)
+length(grep("gbag",text1))
+
+text
+gsub("supported","support",text)
+
+x
+sub("Austin","Austrialia",x)
+
+c <- "ganesh"
+toupper(c)
+tolower(c)
+casefold(c,upper = TRUE)
 
 
 
